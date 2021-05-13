@@ -1,0 +1,7 @@
+stages:
+- name: dt
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification: {}
