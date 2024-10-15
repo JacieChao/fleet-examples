@@ -1,0 +1,17 @@
+namespace: migration-demo
+targetCustomizations:
+- name: test
+  clusterSelector:
+    matchLabels:
+      env: uat
+  yaml:
+    overlays:
+    - servicelb
+
+- name: prod
+  clusterSelector:
+    matchLabels:
+      env: prod
+  yaml:
+    overlays:
+    - scale3
